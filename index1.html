@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=h, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Programa de prueba ola</h1>
+        <div id="contenedor">
+        </div>
+        <button id="boton">Clic</button>
+        <script>
+            const miboton = document.querySelector("#boton")
+            let contenedor = document.querySelector("#contenedor") 
+            let contador = 0
+            function gestorClicks(ev) {
+                //hay que meter mano aquí
+                const parrafo = document.createElement("p")
+                parrafo.innerHTML = `Hola, soy el párrafo ${contador++}`
+                contenedor.appendChild(parrafo)
+            }
+
+            miboton.addEventListener("click", gestorClicks)
+
+        </script>
+    </body>
+</html>
